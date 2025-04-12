@@ -1,12 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Programs.css';
-import linkedinIcon from '../../assets/linkedin.png'; // Adjust path if needed
+import linkedinIcon from '../../assets/linkedin.png';
 
-
-// Dynamically import all .png images in the assets folder
 const images = import.meta.glob('../../assets/*.png', { eager: true });
 
-// Function to get image based on filename
 const getImage = (imageName) => {
   const match = Object.entries(images).find(([path]) =>
     path.includes(imageName)
@@ -33,37 +30,51 @@ const teamMembers = [
   { firstName: 'Abdullah', lastName: '', role: 'Treasurer', image: 'Abdullah.png', linkedin: 'https://www.linkedin.com/in/abdullah-tx/' },
 ];
 
-
-
 const Programs = () => {
+  const scrollRef = useRef(null);
+  const cardWidth = 180; // Width + margin
+
+  const handleScroll = (direction) => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -cardWidth * 2 : cardWidth * 2,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div id="Our Team" className="programs team-section">
       <h2>Executive Board</h2>
-      <div className="team-scroll">
-        {teamMembers.map((member, index) => (
-          <div key={index} className="team-card">
-            <img
-              src={getImage(member.image)}
-              alt={member.name}
-              className="team-photo"
-            />
-            <h3>
-              {member.firstName}<br />
-              {member.lastName}
-            </h3>
-            <p>{member.role}</p>
-            {member.linkedin && (
-  <a
-    href={member.linkedin}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="linkedin-icon"
-  >
-    <img src={linkedinIcon} alt="LinkedIn" />
-  </a>
-)}
-          </div>
-        ))}
+      <div className="carousel-controls">
+        <button onClick={() => handleScroll('left')} className="arrow-btn">‹</button>
+        <div className="team-scroll" ref={scrollRef}>
+          {teamMembers.map((member, index) => (
+            <div key={index} className="team-card">
+              <img
+                src={getImage(member.image)}
+                alt={`${member.firstName} ${member.lastName}`}
+                className="team-photo"
+              />
+              <h3>
+                {member.firstName}<br />
+                {member.lastName}
+              </h3>
+              <p>{member.role}</p>
+              {member.linkedin && (
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="linkedin-icon"
+                >
+                  <img src={linkedinIcon} alt="LinkedIn" />
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+        <button onClick={() => handleScroll('right')} className="arrow-btn">›</button>
       </div>
     </div>
   );
