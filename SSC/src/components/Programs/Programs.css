@@ -1,0 +1,94 @@
+.team-section {
+  padding: 3rem;
+  background-color: #f9f9f9;
+}
+
+.team-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+.team-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 1rem 0;
+  scrollbar-width: thin;
+}
+
+.team-card {
+  flex: 0 0 auto;
+  width: 160px;             /* reduced from 200px */
+  height: 240px;            /* reduced from 310px */
+  background: linear-gradient(to bottom right, #f0f8ff, #21a0df);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.team-card:hover {
+  transform: translateY(-7px);
+}
+
+.team-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  margin-bottom: 0.8rem;
+}
+
+.team-card h3 {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+  color: black;
+  white-space: normal;          /* ✅ Allow line wrap */
+  text-align: center;
+  word-break: break-word;       /* ✅ Break long words */
+  line-height: 1.3;
+}
+
+
+.team-card p {
+  font-size: 0.95rem;
+  margin: 0;
+  color: white;
+}
+
+.linkedin-button {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  background-color: white;
+  color: #21a0df;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.linkedin-button:hover {
+  background-color: white;
+  color: #0077b5;
+  border: 1px solid #0077b5;
+}
+
+.linkedin-icon img {
+  width: 30px;
+  height: 30px;
+  margin-top: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.linkedin-icon:hover img {
+  transform: scale(1.2);
+}

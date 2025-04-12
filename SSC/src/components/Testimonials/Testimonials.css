@@ -1,0 +1,137 @@
+.testimonials{
+    margin: 80x auto;
+    padding: 0 80px;
+    position: relative;
+}
+
+.next-btn, .back-btn{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 15px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #21a0df;
+}
+.back-btn{
+    right: auto;
+    left: 0;
+}
+
+.slider{
+    overflow: hidden;
+}
+
+.slider ul{
+    display: flex;
+    width: 200%;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.slider ul li{
+    list-style: none;
+    width: 50%;
+    padding: 20px;
+}
+
+.slide{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    background-color: rgb(0, 0, 0, 0.09);
+    padding: 40px;
+    border-radius: 10px;
+    color: #676767;
+    line-height: 1.4;
+}
+
+.slide img{
+    width: 65px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 4px solid #21a0df;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.user-info h3{
+    color: #21a0df;
+}
+
+@media (max-width: 800px){
+    .testimonials{
+        padding: 0 40px;
+    }
+    .next-btn, .back-btn{
+        padding: 10px;
+        width: 35px;
+    }
+
+    .testimonials ul li{
+        padding: 10px;
+    }
+
+    .slide{
+        padding: 10px;
+    }
+
+    .slide img{
+        width: 50px;
+        border: 3px solid #21a0df;
+    }
+}
+
+@media (max-width: 450px) {
+    .slider ul {
+      flex-direction: column;
+      width: 100%;
+      transform: none !important; /* prevent shifting due to JS-controlled slider */
+    }
+  
+    .slider ul li {
+      width: 100%;
+      padding: 10px 0;
+    }
+  
+    .testimonials {
+      padding: 0 15px;
+    }
+  
+    .next-btn,
+    .back-btn {
+      display: none; /* hide buttons on very small screens */
+    }
+  
+    .slide {
+      padding: 20px;
+      text-align: center;
+    }
+  
+    .slide img {
+      margin: 0 auto 10px auto;
+      display: block;
+    }
+  
+    .user-info {
+      display: block;
+      text-align: center;
+      font-size: 13px;
+    }
+  
+    .user-info h3 {
+      font-size: 15px;
+      margin-top: 6px;
+    }
+  
+    .slider p {
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+  
