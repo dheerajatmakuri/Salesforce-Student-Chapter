@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(rgba(8,0,58,0.5),rgba(8,0,58,0.5)),url('../../assets/students.png');
+  background: linear-gradient(rgba(8,0,58,0.5),rgba(8,0,58,0.5)), url('../../assets/students.png');
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -10,92 +10,109 @@
   justify-content: center;
 }
 
-
-.hero-text{
-    text-align: center;
-    max-width: 800px;
+/* Slide-in effect */
+.hero-text {
+  text-align: center;
+  max-width: 800px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 1s ease-out forwards;
+  animation-delay: 0.3s;
 }
 
-.hero-text h1{
-    font-size: 50px;
-    font-weight: 600;
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.hero-text p{
-    max-width: 700px;
-    margin: 10px auto 20px;
-    line-height: 1.4;
-    font-size: 20px;
+.hero-text h1 {
+  font-size: 50px;
+  font-weight: 600;
 }
 
-
-@media (max-width: 950px){
-    .hero-text h1{
-        font-size: 40px;
-
-    }
+.hero-text p {
+  max-width: 700px;
+  margin: 10px auto 20px;
+  line-height: 1.4;
+  font-size: 20px;
 }
 
-
-@media (max-width: 650px){
-    .hero-text h1{
-        font-size: 30px;
-        max-width: 400px;
-        margin: auto;
-    }
-
-    .hero-text p{
-        font-size: 14px;
-        margin: 15px auto 30px;
-
-    }
+/* Responsive Text */
+@media (max-width: 950px) {
+  .hero-text h1 {
+    font-size: 40px;
+  }
 }
 
+@media (max-width: 650px) {
+  .hero-text h1 {
+    font-size: 30px;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+    margin: 15px auto 30px;
+  }
+}
+
+/* Button Styles */
 .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #21a0df;
-    color: white;
-    padding: 0.8rem 1.6rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #21a0df;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
-  
-  .btn img {
-    transition: transform 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #0077b6;
-    transform: scale(1.05);
-    color: #fff;
-  }
-  
-  .btn:hover img {
-    transform: translateX(6px); /* arrow slides to right */
-  }
-  
-  /* Optional glow effect */
-  .btn::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 30px;
-    background: linear-gradient(to bottom right, #f0f8ff, #21a0df);
-    opacity: 0;
-    transition: opacity 0.4s;
-    z-index: -1;
-  }
-  
-  .btn:hover::after {
-    opacity: 0.2;
-  }
-  
+}
+
+.btn img {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0077b6;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.btn:hover img {
+  transform: translateX(6px); /* arrow slides to right */
+}
+
+/* Optional glow effect */
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  background: linear-gradient(to bottom right, #f0f8ff, #21a0df);
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  opacity: 0.2;
+}

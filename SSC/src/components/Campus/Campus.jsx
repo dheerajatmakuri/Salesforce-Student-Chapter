@@ -21,7 +21,7 @@ const Campus = () => {
             <img src={utd5} alt="" />
             <img src={utd6} alt="" />
         </div>
-        <a href="https://www.instagram.com/sscatutd?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/sscatutd/" target="_blank" rel="noopener noreferrer">
             <button className='btn dark-btn'>See More Here <img src={white_arrow} alt="" /></button>
         </a>
     </div>

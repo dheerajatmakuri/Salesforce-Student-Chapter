@@ -2,37 +2,46 @@ import React, { useRef } from 'react';
 import './Programs.css';
 import linkedinIcon from '../../assets/linkedin.png';
 
-const images = import.meta.glob('../../assets/*.png', { eager: true });
-
-const getImage = (imageName) => {
-  const match = Object.entries(images).find(([path]) =>
-    path.includes(imageName)
-  );
-  return match ? match[1].default : null;
-};
+// Statically import team member images
+import Shivani from '../../assets/Shivani.png';
+import Gowtham from '../../assets/gowtham.png';
+import SaiKeerthi from '../../assets/SaiKeerthi_Motupalli.png';
+import Humaira from '../../assets/humaira.png';
+import Dheeraj from '../../assets/dheeraj.png';
+import Shaheen from '../../assets/shaheen.png';
+import Sahil from '../../assets/Sahil_Waykole.png';
+import Tejaswini from '../../assets/Tejaswini_Jayagopi.png';
+import Sadashiv from '../../assets/Sadashiv_Mhaskar.png';
+import Vishal from '../../assets/vishal.png';
+import Harshavelu from '../../assets/Harshavelu.png';
+import Manaswita from '../../assets/manaswitha_jaladi.png';
+import Romit from '../../assets/Romit_Jain.png';
+import Prathik from '../../assets/Prathik.png';
+import Navya from '../../assets/navya.png';
+import Abdullah from '../../assets/Abdullah.png';
 
 const teamMembers = [
-  { firstName: 'Shivani', lastName: 'Garg', role: 'President', image: 'Shivani.png', linkedin: 'https://www.linkedin.com/in/shivaniqa/' },
-  { firstName: 'Gowtham', lastName: 'Siddegowda', role: 'Vice President', image: 'gowtham.png', linkedin: 'https://www.linkedin.com/in/gsidgowda/' },
-  { firstName: 'Sai Keerthi', lastName: 'Motupalli', role: 'General Secretary', image: 'SaiKeerthi_Motupalli.png', linkedin: 'https://www.linkedin.com/in/sai-keerthi-motupalli/' },
-  { firstName: 'Humaira', lastName: 'Afreen', role: 'Marketing Lead', image: 'humaira.png', linkedin: 'https://www.linkedin.com/in/humaira-afreen/' },
-  { firstName: 'Dheeraj', lastName: 'Atmakuri', role: 'Marketing Officer', image: 'dheeraj.png', linkedin: 'https://www.linkedin.com/in/dheeraj-atmakuri/' },
-  { firstName: 'Shaheen', lastName: 'Bawajan', role: 'Marketing Officer', image: 'shaheen.png', linkedin: 'https://www.linkedin.com/in/shaheen-bawajan/' },
-  { firstName: 'Sahil', lastName: 'Waykole', role: 'SOC Lead', image: 'Sahil_Waykole.png', linkedin: 'https://www.linkedin.com/in/sahil-waykole/' },
-  { firstName: 'Tejaswini', lastName: 'Jayagopi', role: 'SOC Officer', image: 'Tejaswini_Jayagopi.png', linkedin: 'https://www.linkedin.com/in/tejaswini-jayagopi-8b2695b0/' },
-  { firstName: 'Sadashiv', lastName: 'Mhaskar', role: 'SOC Officer', image: 'Sadashiv_Mhaskar.png', linkedin: 'https://www.linkedin.com/in/sadashiv-mhaskar/' },
-  { firstName: 'Vishal Rathod', lastName: 'Ramavath', role: 'SOC Officer', image: 'vishal.png', linkedin: 'https://www.linkedin.com/in/vishalrathodramavath/' },
-  { firstName: 'Harshavelu', lastName: 'Irrigisetty', role: 'Events Lead', image: 'Harshavelu.png', linkedin: 'https://www.linkedin.com/in/irrigisettyharshavelu/' },
-  { firstName: 'Jaladi', lastName: 'Manaswita', role: 'Events Officer', image: 'manaswitha_jaladi.png', linkedin: 'https://www.linkedin.com/in/jaladi-manaswitha/' },
-  { firstName: 'Romit', lastName: 'Jain', role: 'Events Officer', image: 'Romit_Jain.png', linkedin: 'https://www.linkedin.com/in/romit-jain07/' },
-  { firstName: 'Prathik', lastName: 'Raju', role: 'Events Officer', image: 'Prathik.png', linkedin: 'https://www.linkedin.com/in/prathik-raju/' },
-  { firstName: 'Sai Navya', lastName: 'Asam', role: 'Events Officer', image: 'navya.png', linkedin: 'https://www.linkedin.com/in/navyaasam/' },
-  { firstName: 'Abdullah', lastName: '', role: 'Treasurer', image: 'Abdullah.png', linkedin: 'https://www.linkedin.com/in/abdullah-tx/' },
+  { firstName: 'Shivani', lastName: 'Garg', role: 'President', image: Shivani, linkedin: 'https://www.linkedin.com/in/shivaniqa/' },
+  { firstName: 'Gowtham', lastName: 'Siddegowda', role: 'Vice President', image: Gowtham, linkedin: 'https://www.linkedin.com/in/gsidgowda/' },
+  { firstName: 'Sai Keerthi', lastName: 'Motupalli', role: 'General Secretary', image: SaiKeerthi, linkedin: 'https://www.linkedin.com/in/sai-keerthi-motupalli/' },
+  { firstName: 'Humaira', lastName: 'Afreen', role: 'Marketing Lead', image: Humaira, linkedin: 'https://www.linkedin.com/in/humaira-afreen/' },
+  { firstName: 'Dheeraj', lastName: 'Atmakuri', role: 'Marketing Officer', image: Dheeraj, linkedin: 'https://www.linkedin.com/in/dheeraj-atmakuri/' },
+  { firstName: 'Shaheen', lastName: 'Bawajan', role: 'Marketing Officer', image: Shaheen, linkedin: 'https://www.linkedin.com/in/shaheen-bawajan/' },
+  { firstName: 'Sahil', lastName: 'Waykole', role: 'SOC Lead', image: Sahil, linkedin: 'https://www.linkedin.com/in/sahil-waykole/' },
+  { firstName: 'Tejaswini', lastName: 'Jayagopi', role: 'SOC Officer', image: Tejaswini, linkedin: 'https://www.linkedin.com/in/tejaswini-jayagopi-8b2695b0/' },
+  { firstName: 'Sadashiv', lastName: 'Mhaskar', role: 'SOC Officer', image: Sadashiv, linkedin: 'https://www.linkedin.com/in/sadashiv-mhaskar/' },
+  { firstName: 'Vishal Rathod', lastName: 'Ramavath', role: 'SOC Officer', image: Vishal, linkedin: 'https://www.linkedin.com/in/vishalrathodramavath/' },
+  { firstName: 'Harshavelu', lastName: 'Irrigisetty', role: 'Events Lead', image: Harshavelu, linkedin: 'https://www.linkedin.com/in/irrigisettyharshavelu/' },
+  { firstName: 'Jaladi', lastName: 'Manaswita', role: 'Events Officer', image: Manaswita, linkedin: 'https://www.linkedin.com/in/jaladi-manaswitha/' },
+  { firstName: 'Romit', lastName: 'Jain', role: 'Events Officer', image: Romit, linkedin: 'https://www.linkedin.com/in/romit-jain07/' },
+  { firstName: 'Prathik', lastName: 'Raju', role: 'Events Officer', image: Prathik, linkedin: 'https://www.linkedin.com/in/prathik-raju/' },
+  { firstName: 'Sai Navya', lastName: 'Asam', role: 'Events Officer', image: Navya, linkedin: 'https://www.linkedin.com/in/navyaasam/' },
+  { firstName: 'Abdullah', lastName: '', role: 'Treasurer', image: Abdullah, linkedin: 'https://www.linkedin.com/in/abdullah-tx/' },
 ];
 
 const Programs = () => {
   const scrollRef = useRef(null);
-  const cardWidth = 180; // Width + margin
+  const cardWidth = 180; // Adjust to match your CSS spacing
 
   const handleScroll = (direction) => {
     if (scrollRef.current) {
@@ -52,9 +61,10 @@ const Programs = () => {
           {teamMembers.map((member, index) => (
             <div key={index} className="team-card">
               <img
-                src={getImage(member.image)}
+                src={member.image}
                 alt={`${member.firstName} ${member.lastName}`}
                 className="team-photo"
+                loading="lazy"
               />
               <h3>
                 {member.firstName}<br />
@@ -79,6 +89,5 @@ const Programs = () => {
     </div>
   );
 };
-
 
 export default Programs;
