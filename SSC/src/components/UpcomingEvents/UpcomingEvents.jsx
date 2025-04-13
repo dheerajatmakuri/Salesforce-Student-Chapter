@@ -11,7 +11,7 @@ const UpcomingEvents = () => {
       time: "5:00 - 7:00 PM CST",
       image: kickoffFlyer,
       location: "TBD",
-      registerLink: "https://forms.gle/YOUR_FORM_LINK",
+      registerLink: "https://forms.gle/YghDNEk4uFFb46xQ7",
     },
   ];
 
