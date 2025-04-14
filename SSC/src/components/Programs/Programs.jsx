@@ -3,6 +3,7 @@ import './Programs.css';
 import linkedinIcon from '../../assets/linkedin.png';
 
 // Statically import team member images
+import professor from '../../assets/professor.png';
 import Shivani from '../../assets/Shivani.png';
 import Gowtham from '../../assets/gowtham.png';
 import SaiKeerthi from '../../assets/SaiKeerthi_Motupalli.png';
@@ -21,6 +22,7 @@ import Navya from '../../assets/navya.png';
 import Abdullah from '../../assets/Abdullah.png';
 
 const teamMembers = [
+  { firstName: 'Mr. Moyez', lastName: 'Thanawalla', role: 'Faculty Advisor', image: professor, linkedin: 'https://www.linkedin.com/in/moyezthanawalla/' },
   { firstName: 'Shivani', lastName: 'Garg', role: 'President', image: Shivani, linkedin: 'https://www.linkedin.com/in/shivaniqa/' },
   { firstName: 'Gowtham', lastName: 'Siddegowda', role: 'Vice President', image: Gowtham, linkedin: 'https://www.linkedin.com/in/gsidgowda/' },
   { firstName: 'Sai Keerthi', lastName: 'Motupalli', role: 'General Secretary', image: SaiKeerthi, linkedin: 'https://www.linkedin.com/in/sai-keerthi-motupalli/' },
