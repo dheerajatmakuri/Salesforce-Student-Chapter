@@ -64,9 +64,9 @@ const Testimonials = () => {
           <li>
             <div className="slide">
               <div className="user-info">
-                <img src={user_3} alt="" />
+                <img src={user_4} alt="" />
                 <div>
-                  <h3>Sarah Lee</h3>
+                  <h3>Thalapathy Vijay</h3>
                   <span>Salesforce Student Chapter, UTD</span>
                 </div>
               </div>
@@ -79,9 +79,9 @@ const Testimonials = () => {
           <li>
             <div className="slide">
               <div className="user-info">
-                <img src={user_4} alt="" />
+                <img src={user_3} alt="" />
                 <div>
-                  <h3>David Brown</h3>
+                  <h3>Sarah Lee</h3>
                   <span>Salesforce Student Chapter, UTD</span>
                 </div>
               </div>
