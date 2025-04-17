@@ -1,6 +1,6 @@
 import React from "react";
 import "./UpcomingEvents.css";
-import kickoffFlyer from "../../assets/Salesforce-flyer 1.png";
+import kickoffFlyer from "../../assets/event1.png";
 
 const UpcomingEvents = () => {
   const events = [
@@ -10,7 +10,7 @@ const UpcomingEvents = () => {
       date: "Apr 17",
       time: "5:00 - 7:00 PM CST",
       image: kickoffFlyer,
-      location: "TBD",
+      location: "Davidson Auditorium JSOM - University of Texas at Dallas",
       registerLink: "https://forms.gle/YghDNEk4uFFb46xQ7",
     },
   ];
