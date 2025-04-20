@@ -3,9 +3,9 @@ import "./Testimonials.css";
 import next_icon from "../../assets/next-icon.png";
 import back_icon from "../../assets/back-icon.png";
 import user_1 from "../../assets/user-1.png";
-import user_2 from "../../assets/user-2.png";
+import user_2 from "../../assets/mahesh.png";
 import user_3 from "../../assets/user-3.png";
-import user_4 from "../../assets/user-4.png";
+import user_4 from "../../assets/user-2.png";
 
 const Testimonials = () => {
   const slider = useRef();
@@ -66,7 +66,7 @@ const Testimonials = () => {
               <div className="user-info">
                 <img src={user_4} alt="" />
                 <div>
-                  <h3>Thalapathy Vijay</h3>
+                  <h3>Anant Tyagi</h3>
                   <span>Salesforce Student Chapter, UTD</span>
                 </div>
               </div>
