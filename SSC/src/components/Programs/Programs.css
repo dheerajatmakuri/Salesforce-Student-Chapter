@@ -142,24 +142,25 @@
 @media (max-width: 768px) {
   .team-section {
     padding: 2rem 1rem;
+    min-height: 500px; /* Added line to increase height */
   }
-  
+
   .arrow-btn {
     width: 36px;
     height: 36px;
     font-size: 18px;
   }
-  
+
   .arrow-btn:first-of-type {
     left: -12px;
   }
-  
+
   .arrow-btn:last-of-type {
     right: -12px;
   }
-  
+
   .team-card {
     width: 140px;
-    height: 220px;
+    height: 240px;
   }
 }
