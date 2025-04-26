@@ -1,4 +1,6 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 import './Programs.css';
 import linkedinIcon from '../../assets/linkedin.png';
 
@@ -38,56 +40,68 @@ const teamMembers = [
   { firstName: 'Romit', lastName: 'Jain', role: 'Events Officer', image: Romit, linkedin: 'https://www.linkedin.com/in/romit-jain07/' },
   { firstName: 'Prathik', lastName: 'Raju', role: 'Events Officer', image: Prathik, linkedin: 'https://www.linkedin.com/in/prathik-raju/' },
   { firstName: 'Sai Navya', lastName: 'Asam', role: 'Events Officer', image: Navya, linkedin: 'https://www.linkedin.com/in/navyaasam/' },
-  { firstName: 'Abdullah', lastName: '', role: 'Treasurer', image: Abdullah, linkedin: 'https://www.linkedin.com/in/abdullah-tx/' },
+  { firstName: 'Abdullah       ', lastName: '', role: 'Treasurer', image: Abdullah, linkedin: 'https://www.linkedin.com/in/abdullah-tx/' },
 ];
 
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 6
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 6
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 600 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 600, min: 0 },
+    items: 1
+  }
+};
+
 const Programs = () => {
-  const scrollRef = useRef(null);
-  const cardWidth = 180; // Adjust to match your CSS spacing
-
-  const handleScroll = (direction) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -cardWidth * 2 : cardWidth * 2,
-        behavior: 'smooth'
-      });
-    }
-  };
-
   return (
     <div id="Our Team" className="programs team-section">
       <h2>Executive Board</h2>
-      <div className="carousel-controls">
-        <button onClick={() => handleScroll('left')} className="arrow-btn">‹</button>
-        <div className="team-scroll" ref={scrollRef}>
-          {teamMembers.map((member, index) => (
-            <div key={index} className="team-card">
-              <img
-                src={member.image}
-                alt={`${member.firstName} ${member.lastName}`}
-                className="team-photo"
-                loading="lazy"
-              />
-              <h3>
-                {member.firstName}<br />
-                {member.lastName}
-              </h3>
-              <p>{member.role}</p>
-              {member.linkedin && (
-                <a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="linkedin-icon"
-                >
-                  <img src={linkedinIcon} alt="LinkedIn" />
-                </a>
-              )}
-            </div>
-          ))}
-        </div>
-        <button onClick={() => handleScroll('right')} className="arrow-btn">›</button>
-      </div>
+      <Carousel 
+        responsive={responsive}
+        infinite={true}
+        autoPlay={true}
+        autoPlaySpeed={3000}
+        keyBoardControl={true}
+        showDots={true}
+        arrows={true}
+        className="team-carousel"
+      >
+        {teamMembers.map((member, index) => (
+          <div key={index} className="team-card">
+            <img
+              src={member.image}
+              alt={`${member.firstName} ${member.lastName}`}
+              className="team-photo"
+              loading="lazy"
+            />
+            <h3>
+              {member.firstName}<br />
+              {member.lastName}
+            </h3>
+            <p>{member.role}</p>
+            {member.linkedin && (
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="linkedin-icon"
+              >
+                <img src={linkedinIcon} alt="LinkedIn" />
+              </a>
+            )}
+          </div>
+        ))}
+      </Carousel>
     </div>
   );
 };

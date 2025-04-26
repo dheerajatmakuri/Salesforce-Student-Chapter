@@ -9,42 +9,14 @@
   font-size: 2.2rem;
 }
 
-.carousel-controls {
+/* Main carousel styling */
+.team-carousel {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0 1rem; /* Reduced padding to make carousel tighter */
 }
 
-.team-scroll {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
-}
-
-.team-scroll::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
-}
-
-.team-container {
-  display: flex;
-  gap: 1.5rem;
-  height: 100%;
-}
-
-.team-card-wrapper {
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
+/* Each card inside carousel */
 .team-card {
-  flex: 0 0 auto;
-  width: 160px;
-  height: 240px;
   background: linear-gradient(to bottom right, #f0f8ff, #21a0df);
   border-radius: 16px;
   padding: 1rem;
@@ -53,14 +25,18 @@
   transition: transform 0.3s;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
+  width: 160px;
+  height: 240px;
+  margin: 0; /* REMOVE margin here */
 }
 
 .team-card:hover {
   transform: translateY(-7px);
 }
 
+/* Team member photo */
 .team-photo {
   width: 90px;
   height: 90px;
@@ -70,6 +46,7 @@
   margin-bottom: 0.8rem;
 }
 
+/* Placeholder for images if needed */
 .image-placeholder {
   width: 90px;
   height: 90px;
@@ -79,6 +56,7 @@
   margin-bottom: 0.8rem;
 }
 
+/* Name */
 .team-card h3 {
   font-size: 1rem;
   margin: 0.2rem 0;
@@ -88,12 +66,14 @@
   line-height: 1.3;
 }
 
+/* Role */
 .team-card p {
   font-size: 0.95rem;
   margin: 0;
   color: white;
 }
 
+/* LinkedIn Icon */
 .linkedin-icon img {
   width: 30px;
   height: 30px;
@@ -105,62 +85,65 @@
   transform: scale(1.2);
 }
 
-.arrow-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  font-size: 22px;
-  background-color: #21a0df;
-  color: white;
+/* Dots customization (optional) */
+.react-multi-carousel-dot button {
+  background: #ccc;
   border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s;
 }
 
-.arrow-btn:hover {
+.react-multi-carousel-dot--active button {
+  background: #21a0df;
+}
+
+/* Arrows customization (optional) */
+.react-multiple-carousel__arrow {
+  background-color: #21a0df;
+}
+
+.react-multiple-carousel__arrow:hover {
   background-color: #0077b5;
 }
 
-/* Specific left & right positioning */
-.arrow-btn:first-of-type {
-  left: -20px;
-}
-
-.arrow-btn:last-of-type {
-  right: -20px;
-}
-
-/* Add responsive styles for better mobile experience */
+/* Responsive tweaks */
 @media (max-width: 768px) {
   .team-section {
     padding: 2rem 1rem;
-    min-height: 500px; /* Added line to increase height */
-  }
-
-  .arrow-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 18px;
-  }
-
-  .arrow-btn:first-of-type {
-    left: -12px;
-  }
-
-  .arrow-btn:last-of-type {
-    right: -12px;
+    min-height: 500px;
   }
 
   .team-card {
     width: 140px;
-    height: 240px;
+    height: 230px;
+  }
+
+  .team-photo {
+    width: 80px;
+    height: 80px;
   }
 }
+
+.team-carousel .react-multi-carousel-dot-list {
+  position: relative;
+  bottom: -20px; /* Push dots lower */
+}
+
+.team-carousel {
+  padding-bottom: 40px; /* Add extra space below cards */
+}
+
+
+.react-multiple-carousel__arrow {
+  background-color: #21a0df;
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+}
+
+.react-multiple-carousel__arrow:hover {
+  background-color: #0077b5;
+}
+
+.react-multiple-carousel__arrow::before {
+  font-size: 18px;
+}
+

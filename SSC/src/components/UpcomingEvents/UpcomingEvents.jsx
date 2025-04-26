@@ -17,7 +17,7 @@ const UpcomingEvents = () => {
 
   return (
     <div className="upcoming-events" id="events">
-      <h2>Upcoming Events</h2>
+      <h2>Past Events</h2>
       <div className="events-grid">
         {events.map((event) => (
           <div className="hover-card" key={event.id}>
