@@ -1,17 +1,18 @@
 .hero {
   width: 100%;
-  height: 100vh; /* Full viewport height */
-  background: linear-gradient(135deg, #21a0df, #6dd5fa, #ffffff);
+  height: 100vh;
+  background: linear-gradient(135deg, #0052cc, #007bff, #00c6ff, #0052cc);
   background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
+  animation: gradientShift 6s ease infinite; /* ⬅️ WAS 15s, NOW 6s */
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 20px; /* Add some side padding */
-  box-sizing: border-box; /* Important to prevent scroll overflow */
+  padding: 0 20px;
+  box-sizing: border-box;
 }
+
 
 /* Keep the same background animation */
 @keyframes gradientShift {
