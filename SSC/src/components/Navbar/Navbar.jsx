@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css';
-import utd from '../../assets/Untitled.png';
+import utd from '../../assets/u3.png';
 import { Link as ScrollLink } from 'react-scroll';
 import menu_icon from '../../assets/menu-icon.png';
 
