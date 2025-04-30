@@ -13,31 +13,55 @@ const UpcomingEvents = () => {
       location: "Davidson Auditorium JSOM - University of Texas at Dallas",
       registerLink: "https://forms.gle/YghDNEk4uFFb46xQ7",
     },
+    // Add more events here with actual dates
   ];
+
+  // Helper to parse "MMM DD" into a Date object for the current year
+  const parseEventDate = (dateStr) => {
+    const [month, day] = dateStr.split(' ');
+    return new Date(`${month} ${day}, ${new Date().getFullYear()}`);
+  };
+
+  const today = new Date();
+
+  const pastEvents = events.filter((event) => parseEventDate(event.date) < today);
+  const upcomingEvents = events.filter((event) => parseEventDate(event.date) >= today);
+
+  const renderEvents = (list) => (
+    <div className="events-grid">
+      {list.map((ev) => (
+        <div className="hover-card" key={ev.id}>
+          <img src={ev.image} alt={ev.title} className="flyer-img" />
+          <div className="event-details-hover">
+            <h3>{ev.title}</h3>
+            <p><strong>Date:</strong> {ev.date}</p>
+            <p><strong>Time:</strong> {ev.time}</p>
+            <p><strong>Location:</strong> {ev.location}</p>
+            <a
+              href={ev.registerLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              Register
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <div className="upcoming-events" id="events">
-      <h2>Past Events</h2>
-      <div className="events-grid">
-        {events.map((event) => (
-          <div className="hover-card" key={event.id}>
-            <img src={event.image} alt={event.title} className="flyer-img" />
-            <div className="event-details-hover">
-              <h3>{event.title}</h3>
-              <p><strong>Date:</strong> {event.date}</p>
-              <p><strong>Time:</strong> {event.time}</p>
-              <p><strong>Location:</strong> {event.location}</p>
-              <a
-                href={event.registerLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-              >
-                Register
-              </a>
-            </div>
-          </div>
-        ))}
+      <div className="events-container">
+        <section className="past-events-section">
+          <h2>Past Events</h2>
+          {pastEvents.length ? renderEvents(pastEvents) : <p>No past events.</p>}
+        </section>
+        <section className="upcoming-events-section">
+          <h2>Upcoming Events</h2>
+          {upcomingEvents.length ? renderEvents(upcomingEvents) : <p>No upcoming events.</p>}
+        </section>
       </div>
     </div>
   );
