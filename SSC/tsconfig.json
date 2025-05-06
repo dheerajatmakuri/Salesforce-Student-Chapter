@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "allowJs": true,            // let TS handle .js/.jsx files
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["src/*"]
+      }
+      // …other options…
+    },
+    "include": ["src/**/*"]
+  }
+  

@@ -1,10 +1,12 @@
+// src/components/Programs/Programs.jsx
+
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './Programs.css';
 import linkedinIcon from '../../assets/linkedin.png';
 
-// Statically import team member images
+// Team images
 import professor from '../../assets/professor.png';
 import Shivani from '../../assets/Shivani.png';
 import Gowtham from '../../assets/gowtham.png';
@@ -24,86 +26,66 @@ import Navya from '../../assets/navya.png';
 import Abdullah from '../../assets/Abdullah.png';
 
 const teamMembers = [
-  { firstName: 'Mr. Moyez', lastName: 'Thanawalla', role: 'Faculty Advisor', image: professor, linkedin: 'https://www.linkedin.com/in/moyezthanawalla/' },
-  { firstName: 'Shivani', lastName: 'Garg', role: 'President', image: Shivani, linkedin: 'https://www.linkedin.com/in/shivaniqa/' },
-  { firstName: 'Gowtham', lastName: 'Siddegowda', role: 'Vice President', image: Gowtham, linkedin: 'https://www.linkedin.com/in/gsidgowda/' },
-  { firstName: 'Sai Keerthi', lastName: 'Motupalli', role: 'General Secretary', image: SaiKeerthi, linkedin: 'https://www.linkedin.com/in/sai-keerthi-motupalli/' },
-  { firstName: 'Humaira', lastName: 'Afreen', role: 'Marketing Lead', image: Humaira, linkedin: 'https://www.linkedin.com/in/humaira-afreen/' },
-  { firstName: 'Dheeraj', lastName: 'Atmakuri', role: 'Marketing Officer', image: Dheeraj, linkedin: 'https://www.linkedin.com/in/dheeraj-atmakuri/' },
-  { firstName: 'Shaheen', lastName: 'Bawajan', role: 'Marketing Officer', image: Shaheen, linkedin: 'https://www.linkedin.com/in/shaheen-bawajan/' },
-  { firstName: 'Sahil', lastName: 'Waykole', role: 'SOC Lead', image: Sahil, linkedin: 'https://www.linkedin.com/in/sahil-waykole/' },
-  { firstName: 'Tejaswini', lastName: 'Jayagopi', role: 'SOC Officer', image: Tejaswini, linkedin: 'https://www.linkedin.com/in/tejaswini-jayagopi-8b2695b0/' },
-  { firstName: 'Sadashiv', lastName: 'Mhaskar', role: 'SOC Officer', image: Sadashiv, linkedin: 'https://www.linkedin.com/in/sadashiv-mhaskar/' },
-  { firstName: 'Vishal Rathod', lastName: 'Ramavath', role: 'SOC Officer', image: Vishal, linkedin: 'https://www.linkedin.com/in/vishalrathodramavath/' },
-  { firstName: 'Harshavelu', lastName: 'Irrigisetty', role: 'Events Lead', image: Harshavelu, linkedin: 'https://www.linkedin.com/in/irrigisettyharshavelu/' },
-  { firstName: 'Jaladi', lastName: 'Manaswita', role: 'Events Officer', image: Manaswita, linkedin: 'https://www.linkedin.com/in/jaladi-manaswitha/' },
-  { firstName: 'Romit', lastName: 'Jain', role: 'Events Officer', image: Romit, linkedin: 'https://www.linkedin.com/in/romit-jain07/' },
-  { firstName: 'Prathik', lastName: 'Raju', role: 'Events Officer', image: Prathik, linkedin: 'https://www.linkedin.com/in/prathik-raju/' },
-  { firstName: 'Sai Navya', lastName: 'Asam', role: 'Events Officer', image: Navya, linkedin: 'https://www.linkedin.com/in/navyaasam/' },
-  { firstName: 'Abdullah       ', lastName: '', role: 'Treasurer', image: Abdullah, linkedin: 'https://www.linkedin.com/in/abdullah-tx/' },
+  { name: 'Mr. Moyez Thanawalla', role: 'Faculty Advisor', image: professor, linkedin: 'https://www.linkedin.com/in/moyezthanawalla/' },
+  { name: 'Shivani Garg', role: 'President', image: Shivani, linkedin: 'https://www.linkedin.com/in/shivaniqa/' },
+  { name: 'Gowtham Siddegowda', role: 'Vice President', image: Gowtham, linkedin: 'https://www.linkedin.com/in/gsidgowda/' },
+  { name: 'Sai Keerthi Motupalli', role: 'General Secretary', image: SaiKeerthi, linkedin: 'https://www.linkedin.com/in/sai-keerthi-motupalli/' },
+  { name: 'Humaira Afreen', role: 'Marketing Lead', image: Humaira, linkedin: 'https://www.linkedin.com/in/humaira-afreen/' },
+  { name: 'Dheeraj Atmakuri', role: 'Marketing Officer', image: Dheeraj, linkedin: 'https://www.linkedin.com/in/dheeraj-atmakuri/' },
+  { name: 'Shaheen Bawajan', role: 'Marketing Officer', image: Shaheen, linkedin: 'https://www.linkedin.com/in/shaheen-bawajan/' },
+  { name: 'Sahil Waykole', role: 'SOC Lead', image: Sahil, linkedin: 'https://www.linkedin.com/in/sahil-waykole/' },
+  { name: 'Tejaswini Jayagopi', role: 'SOC Officer', image: Tejaswini, linkedin: 'https://www.linkedin.com/in/tejaswini-jayagopi-8b2695b0/' },
+  { name: 'Sadashiv Mhaskar', role: 'SOC Officer', image: Sadashiv, linkedin: 'https://www.linkedin.com/in/sadashiv-mhaskar/' },
+  { name: 'Vishal Rathod Ramavath', role: 'SOC Officer', image: Vishal, linkedin: 'https://www.linkedin.com/in/vishalrathodramavath/' },
+  { name: 'Harshavelu Irrigisetty', role: 'Events Lead', image: Harshavelu, linkedin: 'https://www.linkedin.com/in/irrigisettyharshavelu/' },
+  { name: 'Manaswita Jaladi', role: 'Events Officer', image: Manaswita, linkedin: 'https://www.linkedin.com/in/jaladi-manaswitha/' },
+  { name: 'Romit Jain', role: 'Events Officer', image: Romit, linkedin: 'https://www.linkedin.com/in/romit-jain07/' },
+  { name: 'Prathik Raju', role: 'Events Officer', image: Prathik, linkedin: 'https://www.linkedin.com/in/prathik-raju/' },
+  { name: 'Sai Navya Asam', role: 'Events Officer', image: Navya, linkedin: 'https://www.linkedin.com/in/navyaasam/' },
+  { name: 'Abdullah', role: 'Treasurer', image: Abdullah, linkedin: 'https://www.linkedin.com/in/abdullah-tx/' },
 ];
 
 const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 6
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 6
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 600 },
-    items: 2
-  },
-  mobile: {
-    breakpoint: { max: 600, min: 0 },
-    items: 2
-  }
+  desktop:   { breakpoint: { max: 3000, min: 1024 }, items: 4 },
+  tablet:    { breakpoint: { max: 1024, min: 600 },  items: 2 },
+  mobile:    { breakpoint: { max: 600,  min: 0   }, items: 1 },
 };
 
-const Programs = () => {
+export default function Programs() {
   return (
-    <div id="Our Team" className="programs team-section">
-      <h2>Executive Board</h2>
-      <Carousel 
+    <div id="our Team" className="Our Team">
+      <Carousel
         responsive={responsive}
-        infinite={true}
-        autoPlay={true}
+        infinite
+        autoPlay
         autoPlaySpeed={3000}
-        keyBoardControl={true}
-        showDots={true}
-        arrows={true}
+        showDots
+        arrows
         className="team-carousel"
       >
-        {teamMembers.map((member, index) => (
-          <div key={index} className="team-card">
-            <img
-              src={member.image}
-              alt={`${member.firstName} ${member.lastName}`}
-              className="team-photo"
-              loading="lazy"
-            />
-            <h3>
-              {member.firstName}<br />
-              {member.lastName}
-            </h3>
-            <p>{member.role}</p>
-            {member.linkedin && (
-              <a
-                href={member.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="linkedin-icon"
-              >
-                <img src={linkedinIcon} alt="LinkedIn" />
-              </a>
-            )}
+        {teamMembers.map((member, idx) => (
+          <div key={idx} className="team-card">
+            <div className="avatar-container">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="team-photo"
+                loading="lazy"
+              />
+            </div>
+            <div className="member-info">
+              <h3>{member.name}</h3>
+              <p>{member.role}</p>
+              {member.linkedin && (
+                <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                  <img src={linkedinIcon} alt="LinkedIn" className="linkedin-icon"/>
+                </a>
+              )}
+            </div>
           </div>
         ))}
       </Carousel>
     </div>
   );
-};
+}
 
-export default Programs;

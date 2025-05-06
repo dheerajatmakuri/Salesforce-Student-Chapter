@@ -19,6 +19,7 @@ const App = () => {
       <div className="container">
         <Title subTitle='Our Team' title=''/>
         <Programs/>
+        <br /><br /><br /><br /><br />
         <UpcomingEvents/>
         <About/>
         <Title subTitle='A Glimpse into Our Events' title='Gallery' />

@@ -6,6 +6,8 @@ import user_1 from "../../assets/user-1.png";
 import user_2 from "../../assets/mahesh.png";
 import user_3 from "../../assets/user-3.png";
 import user_4 from "../../assets/anant.png";
+import user_5 from "../../assets/chakri.png";
+
 
 const Testimonials = () => {
   const slider = useRef();
@@ -86,7 +88,22 @@ const Testimonials = () => {
                 </div>
               </div>
               <p>
-              Being part of the Salesforce community at UTD has given me real-world experience, valuable certifications, and a strong professional network to support my career growth.
+              UTD’s Salesforce chapter empowered me with practical skills, industry credentials, and invaluable connections.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div className="slide">
+              <div className="user-info">
+                <img src={user_5} alt="" />
+                <div>
+                  <h3>Sai Chakradhar</h3>
+                  <span>Salesforce Student Chapter, UTD</span>
+                </div>
+              </div>
+              <p>
+              UTD’s Salesforce community gave me hands-on experience, key certifications, and a powerful professional network
               </p>
             </div>
           </li>

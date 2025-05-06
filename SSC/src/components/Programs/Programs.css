@@ -1,93 +1,85 @@
-.team-section {
-  padding: 3rem;
+/* src/components/Programs/Programs.css */
+
+.programs {
+  padding: 2rem;
   background-color: #f9f9f9;
 }
 
-.team-section h2 {
+.programs h2 {
   text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
 }
 
-/* Main carousel styling */
+/* Carousel adjustments */
 .team-carousel {
-  position: relative;
-  padding: 0 1rem; /* Reduced padding to make carousel tighter */
+  padding-bottom: 2rem;
 }
 
-/* Each card inside carousel */
+/* Card */
 .team-card {
+  /* Blue gradient background */
   background: linear-gradient(to bottom right, #f0f8ff, #21a0df);
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
   text-align: center;
-  transition: transform 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  width: 160px;
-  height: 240px;
-  margin: 0; /* REMOVE margin here */
+  /* Optional: add a slight shadow for contrast */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.team-card:hover {
-  transform: translateY(-7px);
+/* Avatar */
+.avatar-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  border: 2px solid #fff;
 }
 
-/* Team member photo */
 .team-photo {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border: 3px solid white;
-  margin-bottom: 0.8rem;
 }
 
-/* Placeholder for images if needed */
-.image-placeholder {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-color: #f0f0f0;
-  border: 3px solid white;
-  margin-bottom: 0.8rem;
+/* Text */
+.member-info h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff; /* white text over the blue gradient */
 }
 
-/* Name */
-.team-card h3 {
-  font-size: 1rem;
-  margin: 0.2rem 0;
-  color: black;
-  text-align: center;
-  word-break: break-word;
-  line-height: 1.3;
-}
-
-/* Role */
-.team-card p {
-  font-size: 0.95rem;
+.member-info p {
   margin: 0;
-  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f0f0f0; /* light grey for contrast */
 }
 
-/* LinkedIn Icon */
-.linkedin-icon img {
-  width: 30px;
-  height: 30px;
-  margin-top: 0.8rem;
-  transition: transform 0.2s ease;
+/* LinkedIn icon */
+.linkedin-icon {
+  width: 24px;
+  height: 24px;
+  margin-top: 0.5rem;
+  transition: transform 0.2s;
 }
 
-.linkedin-icon:hover img {
+.linkedin-icon:hover {
   transform: scale(1.2);
 }
 
-/* Dots customization (optional) */
+/* Dots */
 .react-multi-carousel-dot button {
   background: #ccc;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 4px;
   border: none;
 }
 
@@ -95,55 +87,15 @@
   background: #21a0df;
 }
 
-/* Arrows customization (optional) */
-.react-multiple-carousel__arrow {
-  background-color: #21a0df;
+/* Arrows */
+.react-multi-carousel-arrow {
+  background-color: #21a0df !important;
+  color: #fff !important;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
 }
 
-.react-multiple-carousel__arrow:hover {
-  background-color: #0077b5;
+.react-multi-carousel-arrow:hover {
+  background-color: #0077b5 !important;
 }
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .team-section {
-    padding: 2rem 1rem;
-    min-height: 500px;
-  }
-
-  .team-card {
-    width: 140px;
-    height: 250px;
-  }
-
-  .team-photo {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-.team-carousel .react-multi-carousel-dot-list {
-  position: relative;
-  bottom: -20px; /* Push dots lower */
-}
-
-.team-carousel {
-  padding-bottom: 40px; /* Add extra space below cards */
-}
-
-
-.react-multiple-carousel__arrow {
-  background-color: #21a0df;
-  width: 35px;
-  height: 35px;
-  min-width: 35px;
-}
-
-.react-multiple-carousel__arrow:hover {
-  background-color: #0077b5;
-}
-
-.react-multiple-carousel__arrow::before {
-  font-size: 18px;
-}
-
