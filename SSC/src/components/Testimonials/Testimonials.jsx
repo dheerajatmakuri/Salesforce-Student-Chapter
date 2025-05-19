@@ -6,7 +6,7 @@ import user_1 from "../../assets/user-1.png";
 import user_2 from "../../assets/mahesh.png";
 import user_3 from "../../assets/user-3.png";
 import user_4 from "../../assets/anant.png";
-import user_5 from "../../assets/chakri.png";
+import user_5 from "../../assets/ch1.png";
 
 
 const Testimonials = () => {
@@ -103,7 +103,7 @@ const Testimonials = () => {
                 </div>
               </div>
               <p>
-              UTD’s Salesforce community gave me hands-on experience, key certifications, and a powerful professional network
+              Being part of the Salesforce Student Chapter at UTD has been a game-changer! The club offers great networking and hands-on learning.
               </p>
             </div>
           </li>
