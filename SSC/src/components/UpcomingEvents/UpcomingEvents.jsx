@@ -1,6 +1,7 @@
 import React from "react";
 import "./UpcomingEvents.css";
 import kickoffFlyer from "../../assets/event1.png";
+import hiringFlyer from "../../assets/hiring.png";  // ← your new flyer
 
 const UpcomingEvents = () => {
   const events = [
@@ -11,21 +12,28 @@ const UpcomingEvents = () => {
       time: "5:00 - 7:00 PM CST",
       image: kickoffFlyer,
       location: "Davidson Auditorium JSOM - University of Texas at Dallas",
-      registerLink: "https://forms.gle/YghDNEk4uFFb46xQ7",
+      registerLink: "",
     },
-    // Add more events here with actual dates
+    {
+      id: 2,
+      title: "We Are Hiring! Join the Salesforce Student Chapter UTD",
+      date: "July 30",                   // ← update to real date
+      time: "-",       // ← update to real time
+      image: hiringFlyer,
+      location: "Online via Zoom",      // ← update to real location
+      registerLink: "https://docs.google.com/forms/d/1x5NXIFAbAkxaoesJ0WjJhIwo3XU8ywGTVxeN0uGeviw/viewform?edit_requested=true",  // ← update if needed
+    },
   ];
 
   // Helper to parse "MMM DD" into a Date object for the current year
   const parseEventDate = (dateStr) => {
-    const [month, day] = dateStr.split(' ');
+    const [month, day] = dateStr.split(" ");
     return new Date(`${month} ${day}, ${new Date().getFullYear()}`);
   };
 
   const today = new Date();
-
-  const pastEvents = events.filter((event) => parseEventDate(event.date) < today);
-  const upcomingEvents = events.filter((event) => parseEventDate(event.date) >= today);
+  const pastEvents = events.filter((e) => parseEventDate(e.date) < today);
+  const upcomingEvents = events.filter((e) => parseEventDate(e.date) >= today);
 
   const renderEvents = (list) => (
     <div className="events-grid">
@@ -60,7 +68,10 @@ const UpcomingEvents = () => {
         </section>
         <section className="upcoming-events-section">
           <h2>Upcoming Events</h2>
-          {upcomingEvents.length ? renderEvents(upcomingEvents) : <p>No upcoming events.</p>}
+          {upcomingEvents.length
+            ? renderEvents(upcomingEvents)
+            : <p>No upcoming events.</p>
+          }
         </section>
       </div>
     </div>
