@@ -4,161 +4,161 @@
       "id": "1",
       "name": "Mr. Moyez Thanawalla",
       "role": "Faculty Advisor",
-      "image": "/src/assets/professor.png",
+      "image": "/assets/professor.png",
       "linkedin": "https://www.linkedin.com/in/moyezthanawalla/"
     },
     {
       "id": "2",
       "name": "Shivani Garg",
       "role": "President",
-      "image": "/src/assets/Shivani.png",
+      "image": "/assets/Shivani.png",
       "linkedin": "https://www.linkedin.com/in/shivaniqa/"
     },
     {
       "id": "3",
       "name": "Gowtham Siddegowda",
       "role": "Vice President",
-      "image": "/src/assets/gowtham.png",
+      "image": "/assets/gowtham.png",
       "linkedin": "https://www.linkedin.com/in/gsidgowda/"
     },
     {
       "id": "4",
       "name": "Sai Keerthi Motupalli",
       "role": "General Secretary",
-      "image": "/src/assets/SaiKeerthi_Motupalli.png",
+      "image": "/assets/SaiKeerthi_Motupalli.png",
       "linkedin": "https://www.linkedin.com/in/sai-keerthi-motupalli/"
     },
     {
       "id": "5",
       "name": "Varsha Singh",
       "role": "Marketing Lead",
-      "image": "/src/assets/Varsha_Singh.png",
+      "image": "/assets/Varsha_Singh.png",
       "linkedin": "https://www.linkedin.com/in/varsha-singh0403/"
     },
     {
       "id": "6",
       "name": "Noorin Zuleqa",
       "role": "Marketing Officer",
-      "image": "/src/assets/Noorin.png",
+      "image": "/assets/Noorin.png",
       "linkedin": "https://www.linkedin.com/in/noorin-zuleqa-80017b340/"
     },
     {
       "id": "7",
       "name": "Rashi Jha",
       "role": "Marketing Officer",
-      "image": "/src/assets/Rashi_Jha.png",
+      "image": "/assets/Rashi_Jha.png",
       "linkedin": "https://www.linkedin.com/in/rashi-jha/"
     },
     {
       "id": "8",
       "name": "Sahana Mecheri",
       "role": "Marketing Officer",
-      "image": "/src/assets/Sahana_Mecheri.png",
+      "image": "/assets/Sahana_Mecheri.png",
       "linkedin": "https://www.linkedin.com/in/sahana-mecheri-3248a21b8/"
     },
     {
       "id": "9",
       "name": "Vidhi Jaju",
       "role": "Marketing Officer",
-      "image": "/src/assets/Vidhi.png",
+      "image": "/assets/Vidhi.png",
       "linkedin": "http://www.linkedin.com/in/vidhi-jaju"
     },
     {
       "id": "10",
       "name": "Shaheen Bawajan",
       "role": "Marketing Officer",
-      "image": "/src/assets/shaheen.png",
+      "image": "/assets/shaheen.png",
       "linkedin": "https://www.linkedin.com/in/shaheen-bawajan/"
     },
     {
       "id": "11",
       "name": "Indrani Borra",
       "role": "Web Developer",
-      "image": "/src/assets/Indrani.png",
+      "image": "/assets/Indrani.png",
       "linkedin": "https://www.linkedin.com/in/indrani09/"
     },
     {
       "id": "12",
       "name": "Mahesh Gorle",
       "role": "SOC Lead",
-      "image": "/src/assets/Mahesh.png",
+      "image": "/assets/Mahesh.png",
       "linkedin": "https://www.linkedin.com/in/gorlemahesh/"
     },
     {
       "id": "13",
       "name": "Abhinav Kumar",
       "role": "SOC Officer",
-      "image": "/src/assets/Abhinav.png",
+      "image": "/assets/Abhinav.png",
       "linkedin": "https://www.linkedin.com/in/abhinavkblr"
     },
     {
       "id": "14",
       "name": "Mohammad Fadil Khan",
       "role": "SOC Officer",
-      "image": "/src/assets/Mohammad_Fadil_Khan.png",
+      "image": "/assets/Mohammad_Fadil_Khan.png",
       "linkedin": "https://www.linkedin.com/in/fadilk668"
     },
     {
       "id": "15",
       "name": "Gurleen Kaur Khalse",
       "role": "SOC Officer",
-      "image": "/src/assets/Gurleen_kaur_Khalsa.png",
+      "image": "/assets/Gurleen_kaur_Khalsa.png",
       "linkedin": "https://www.linkedin.com/in/gurleenkaurkhalsa/"
     },
     {
       "id": "16",
       "name": "Vishal Rathod Ramavath",
       "role": "SOC Officer",
-      "image": "/src/assets/vishal.png",
+      "image": "/assets/vishal.png",
       "linkedin": "https://www.linkedin.com/in/vishalrathodramavath/"
     },
     {
       "id": "17",
       "name": "Harshavelu Irrigisetty",
       "role": "Events Lead",
-      "image": "/src/assets/Harshavelu.png",
+      "image": "/assets/Harshavelu.png",
       "linkedin": "https://www.linkedin.com/in/irrigisettyharshavelu/"
     },
     {
       "id": "18",
       "name": "Romit Jain",
       "role": "Events Officer",
-      "image": "/src/assets/Romit_Jain.png",
+      "image": "/assets/Romit_Jain.png",
       "linkedin": "https://www.linkedin.com/in/romit-jain07/"
     },
     {
       "id": "19",
       "name": "Prathik Raju",
       "role": "Events Officer",
-      "image": "/src/assets/Prathik.png",
+      "image": "/assets/Prathik.png",
       "linkedin": "https://www.linkedin.com/in/prathik-raju/"
     },
     {
       "id": "20",
       "name": "Sai Navya Asam",
       "role": "Events Officer",
-      "image": "/src/assets/navya.png",
+      "image": "/assets/navya.png",
       "linkedin": "https://www.linkedin.com/in/navyaasam/"
     },
     {
       "id": "21",
       "name": "Abdullah",
       "role": "Treasurer",
-      "image": "/src/assets/Abdullah.png",
+      "image": "/assets/Abdullah.png",
       "linkedin": "https://www.linkedin.com/in/abdullah-tx/"
     },
     {
       "id": "22",
       "name": "Tejaswini Jayagopi",
       "role": "Treasurer",
-      "image": "/src/assets/Tejaswini_Jayagopi.png",
+      "image": "/assets/Tejaswini_Jayagopi.png",
       "linkedin": "https://www.linkedin.com/in/tejaswini-jayagopi-8b2695b0/"
     },
     {
       "id": "23",
       "name": "Parth Rajpara",
       "role": "Treasurer",
-      "image": "/src/assets/Parth_Rajpara.png",
+      "image": "/assets/Parth_Rajpara.png",
       "linkedin": "https://www.linkedin.com/in/parthrajpara/"
     }
   ]
