@@ -1,7 +1,8 @@
 import React from "react";
 import "./UpcomingEvents.css";
 import kickoffFlyer from "../../assets/event1.png";
-import hiringFlyer from "../../assets/hiring.png";  // ← your new flyer
+import hiringFlyer from "../../assets/hiring.png";
+import kickoffFlyer1 from "../../assets/kickoffFlyer1.png";
 
 const UpcomingEvents = () => {
   const events = [
@@ -17,11 +18,20 @@ const UpcomingEvents = () => {
     {
       id: 2,
       title: "We Are Hiring! Join the Salesforce Student Chapter UTD",
-      date: "July 30",                   // ← update to real date
-      time: "-",       // ← update to real time
+      date: "July 30",
+      time: "-",
       image: hiringFlyer,
-      location: "Online via Zoom",      // ← update to real location
-      registerLink: "https://docs.google.com/forms/d/1x5NXIFAbAkxaoesJ0WjJhIwo3XU8ywGTVxeN0uGeviw/viewform?edit_requested=true",  // ← update if needed
+      location: "Online via Zoom",
+      registerLink: "https://docs.google.com/forms/d/1x5NXIFAbAkxaoesJ0WjJhIwo3XU8ywGTVxeN0uGeviw/viewform?edit_requested=true",
+    },
+    {
+      id: 3,
+      title: "Salesforce Student Chapter UTD Kickoff Event",
+      date: "Sep 27",
+      time: "TBD",
+      image: kickoffFlyer1,
+      location: "TBD",
+      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeaOUZGyZlgUQLRS6QVCicfPrQMAq2UXtelQvdY_Emh3Q8LaA/viewform",
     },
   ];
 
