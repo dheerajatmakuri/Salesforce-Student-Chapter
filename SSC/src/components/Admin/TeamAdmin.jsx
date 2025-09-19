@@ -84,20 +84,33 @@ const TeamAdmin = () => {
   const updateTeamMembers = (updatedMembers) => {
     setTeamMembers(updatedMembers);
 
-    // Note: In a real implementation, you would send this to a backend API
-    // For this demo, we'll show the JSON that should be saved
+    // Create JSON data that should be saved to the file
     const jsonData = { teamMembers: updatedMembers };
-    console.log('Updated JSON data:', JSON.stringify(jsonData, null, 2));
+    const jsonString = JSON.stringify(jsonData, null, 2);
 
-    // Show instructions to user
-    alert(`Team members updated!
+    // Copy to clipboard
+    navigator.clipboard.writeText(jsonString).then(() => {
+      alert(`✅ Team members updated! JSON copied to clipboard!
 
-To apply changes:
+📝 To apply changes:
+1. Open /public/data/team-members.json
+2. Select all content (Ctrl+A / Cmd+A)
+3. Paste the new JSON (Ctrl+V / Cmd+V)
+4. Save the file
+5. Refresh the website to see changes
+
+The updated JSON has been automatically copied to your clipboard!`);
+    }).catch(() => {
+      // Fallback if clipboard API fails
+      console.log('Updated JSON data:', jsonString);
+      alert(`✅ Team members updated!
+
+📝 To apply changes:
 1. Copy the JSON from browser console
 2. Replace contents of /public/data/team-members.json
-3. Refresh the website
-
-(In production, this would update automatically)`);
+3. Save the file
+4. Refresh the website to see changes`);
+    });
   };
 
   if (loading) {
@@ -108,12 +121,29 @@ To apply changes:
     <div className="team-admin">
       <div className="admin-header">
         <h1>Team Members Admin</h1>
-        <button
-          className="btn btn-primary"
-          onClick={() => setShowAddForm(true)}
-        >
-          Add New Member
-        </button>
+        <div className="header-buttons">
+          <button
+            className="btn btn-secondary"
+            onClick={() => {
+              const jsonData = { teamMembers };
+              const jsonString = JSON.stringify(jsonData, null, 2);
+              navigator.clipboard.writeText(jsonString).then(() => {
+                alert('Current team data copied to clipboard! You can paste this into /public/data/team-members.json');
+              }).catch(() => {
+                console.log('Current JSON data:', jsonString);
+                alert('Current team data logged to console. Copy from there to /public/data/team-members.json');
+              });
+            }}
+          >
+            Copy Current JSON
+          </button>
+          <button
+            className="btn btn-primary"
+            onClick={() => setShowAddForm(true)}
+          >
+            Add New Member
+          </button>
+        </div>
       </div>
 
       {/* Add/Edit Form */}

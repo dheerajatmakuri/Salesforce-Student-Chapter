@@ -86,80 +86,80 @@
     },
     {
       "id": "13",
+      "name": "Abhinav Kumar",
+      "role": "SOC Officer",
+      "image": "/src/assets/Abhinav.png",
+      "linkedin": "https://www.linkedin.com/in/abhinavkblr"
+    },
+    {
+      "id": "14",
       "name": "Mohammad Fadil Khan",
       "role": "SOC Officer",
       "image": "/src/assets/Mohammad_Fadil_Khan.png",
       "linkedin": "https://www.linkedin.com/in/fadilk668"
     },
     {
-      "id": "14",
+      "id": "15",
       "name": "Gurleen Kaur Khalse",
       "role": "SOC Officer",
       "image": "/src/assets/Gurleen_kaur_Khalsa.png",
       "linkedin": "https://www.linkedin.com/in/gurleenkaurkhalsa/"
     },
     {
-      "id": "15",
+      "id": "16",
       "name": "Vishal Rathod Ramavath",
       "role": "SOC Officer",
       "image": "/src/assets/vishal.png",
       "linkedin": "https://www.linkedin.com/in/vishalrathodramavath/"
     },
     {
-      "id": "16",
+      "id": "17",
       "name": "Harshavelu Irrigisetty",
       "role": "Events Lead",
       "image": "/src/assets/Harshavelu.png",
       "linkedin": "https://www.linkedin.com/in/irrigisettyharshavelu/"
     },
     {
-      "id": "17",
+      "id": "18",
       "name": "Romit Jain",
       "role": "Events Officer",
       "image": "/src/assets/Romit_Jain.png",
       "linkedin": "https://www.linkedin.com/in/romit-jain07/"
     },
     {
-      "id": "18",
+      "id": "19",
       "name": "Prathik Raju",
       "role": "Events Officer",
       "image": "/src/assets/Prathik.png",
       "linkedin": "https://www.linkedin.com/in/prathik-raju/"
     },
     {
-      "id": "19",
+      "id": "20",
       "name": "Sai Navya Asam",
       "role": "Events Officer",
       "image": "/src/assets/navya.png",
       "linkedin": "https://www.linkedin.com/in/navyaasam/"
     },
     {
-      "id": "20",
+      "id": "21",
       "name": "Abdullah",
       "role": "Treasurer",
       "image": "/src/assets/Abdullah.png",
       "linkedin": "https://www.linkedin.com/in/abdullah-tx/"
     },
     {
-      "id": "21",
+      "id": "22",
       "name": "Tejaswini Jayagopi",
       "role": "Treasurer",
       "image": "/src/assets/Tejaswini_Jayagopi.png",
       "linkedin": "https://www.linkedin.com/in/tejaswini-jayagopi-8b2695b0/"
     },
     {
-      "id": "22",
+      "id": "23",
       "name": "Parth Rajpara",
       "role": "Treasurer",
       "image": "/src/assets/Parth_Rajpara.png",
       "linkedin": "https://www.linkedin.com/in/parthrajpara/"
-    },
-    {
-      "id": "1758253726268",
-      "name": "Abhinav Kumar",
-      "role": "SOC Officer",
-      "image": "/src/assets/Abhinav.png",
-      "linkedin": "https://www.linkedin.com/in/abhinavkblr"
     }
   ]
 }

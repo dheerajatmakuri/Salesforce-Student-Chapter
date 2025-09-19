@@ -1,11 +1,10 @@
 // src/components/Programs/Programs.jsx
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './Programs.css';
 import linkedinIcon from '../../assets/linkedin.png';
-import { useTeamMembers } from '../../hooks/useTeamMembers';
 
 const responsive = {
   desktop:   { breakpoint: { max: 3000, min: 1024 }, items: 4 },
@@ -14,23 +13,30 @@ const responsive = {
 };
 
 export default function Programs() {
-  const { teamMembers, loading, error } = useTeamMembers();
+  const [teamMembers, setTeamMembers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchTeamMembers();
+  }, []);
+
+  const fetchTeamMembers = async () => {
+    try {
+      const response = await fetch('/data/team-members.json');
+      const data = await response.json();
+      setTeamMembers(data.teamMembers);
+    } catch (error) {
+      console.error('Error fetching team members:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   if (loading) {
     return (
       <div id="our Team" className="Our Team">
         <div style={{ textAlign: 'center', padding: '50px' }}>
           <p>Loading team members...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div id="our Team" className="Our Team">
-        <div style={{ textAlign: 'center', padding: '50px' }}>
-          <p>Error loading team members: {error}</p>
         </div>
       </div>
     );
