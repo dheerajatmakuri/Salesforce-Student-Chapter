@@ -3,7 +3,7 @@ import "./Testimonials.css";
 import next_icon from "../../assets/next-icon.png";
 import back_icon from "../../assets/back-icon.png";
 import user_1 from "../../assets/user-1.png";
-import user_2 from "../../assets/mahesh.png";
+import user_2 from "../../assets/Mahesh.png";
 import user_3 from "../../assets/user-3.png";
 import user_4 from "../../assets/anant.png";
 import user_5 from "../../assets/ch1.png";
